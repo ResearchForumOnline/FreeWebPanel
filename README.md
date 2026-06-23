@@ -30,7 +30,7 @@ After installation:
 - Mailboxes, forwards, webmail launchers, and deliverability checks
 - SQL databases and phpMyAdmin/Adminer launcher flow
 - Security posture checks, firewall guidance, and update lane
-- Light, Dark, Midnight, and Studio panel themes
+- Light, Dark, Midnight, and Studio panel themes as compiled official runtime assets
 - Automatic FreeWebPanel core update checks
 - Manual update route for admins
 
@@ -61,6 +61,8 @@ Free Core is public and installable from GitHub. Pro features, official licensin
 
 Only FreeWebPanel.com is authorised to sell official FreeWebPanel licenses, Pro access, hosted update services, and support. Hosting providers can use Free Core on their own servers, but they may not sell unofficial FreeWebPanel licenses or represent themselves as the official vendor.
 
+The public installer does not publish private theme source. Installed servers receive compiled/minified runtime assets only. See [docs/THEME_ASSET_PROTECTION.md](docs/THEME_ASSET_PROTECTION.md).
+
 See [docs/LICENSING_AND_PROTECTION.md](docs/LICENSING_AND_PROTECTION.md).
 
 ## Security
@@ -71,4 +73,4 @@ Security reports: [SECURITY.md](SECURITY.md)
 
 ## License
 
-Free Core is distributed under the Apache License 2.0. FreeWebPanel names, logos, official service marks, Pro modules, paid licensing flows, update signing keys, and commercial support channels are not granted by the Apache license.
+Free Core is distributed under the Apache License 2.0. FreeWebPanel names, logos, official service marks, Pro modules, paid licensing flows, update signing keys, commercial support channels, and official theme trade dress are not granted by the Apache license.
