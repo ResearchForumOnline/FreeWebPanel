@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360" role="img" aria-labelledby="title desc">
+  <title id="title">FreeWebPanel install flow</title>
+  <desc id="desc">A dark flow diagram showing DNS setup, install, login, launch websites, and maintain updates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#03101f"/><stop offset="1" stop-color="#071a31"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1be6c4"/><stop offset="1" stop-color="#168bff"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity="0.28"/></filter>
+  </defs>
+  <rect width="1100" height="360" rx="32" fill="url(#bg)"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" filter="url(#s)">
+    <g transform="translate(40 68)"><rect width="180" height="190" rx="22" fill="#0b2036" stroke="#1c4b78"/><circle cx="90" cy="48" r="24" fill="url(#a)"/><text x="90" y="56" text-anchor="middle" font-size="22" font-weight="900" fill="#00101b">1</text><text x="28" y="105" font-size="24" font-weight="850" fill="#fff">DNS first</text><text x="28" y="138" font-size="16" fill="#b9cbe0">Point panel, ns1,</text><text x="28" y="162" font-size="16" fill="#b9cbe0">and ns2 records.</text></g>
+    <path d="M235 160h70" stroke="#35c7ff" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(320 68)"><rect width="180" height="190" rx="22" fill="#0b2036" stroke="#1c4b78"/><circle cx="90" cy="48" r="24" fill="url(#a)"/><text x="90" y="56" text-anchor="middle" font-size="22" font-weight="900" fill="#00101b">2</text><text x="28" y="105" font-size="24" font-weight="850" fill="#fff">Install</text><text x="28" y="138" font-size="16" fill="#b9cbe0">Run GitHub</text><text x="28" y="162" font-size="16" fill="#b9cbe0">installer wrapper.</text></g>
+    <path d="M515 160h70" stroke="#35c7ff" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(600 68)"><rect width="180" height="190" rx="22" fill="#0b2036" stroke="#1c4b78"/><circle cx="90" cy="48" r="24" fill="url(#a)"/><text x="90" y="56" text-anchor="middle" font-size="22" font-weight="900" fill="#00101b">3</text><text x="28" y="105" font-size="24" font-weight="850" fill="#fff">Log in</text><text x="28" y="138" font-size="16" fill="#b9cbe0">Use admin panel</text><text x="28" y="162" font-size="16" fill="#b9cbe0">and create users.</text></g>
+    <path d="M795 160h70" stroke="#35c7ff" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(880 68)"><rect width="180" height="190" rx="22" fill="#0b2036" stroke="#1c4b78"/><circle cx="90" cy="48" r="24" fill="url(#a)"/><text x="90" y="56" text-anchor="middle" font-size="22" font-weight="900" fill="#00101b">4</text><text x="28" y="105" font-size="24" font-weight="850" fill="#fff">Host</text><text x="28" y="138" font-size="16" fill="#b9cbe0">Launch sites, SSL,</text><text x="28" y="162" font-size="16" fill="#b9cbe0">mail, SQL, files.</text></g>
+  </g>
+  <text x="550" y="318" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800" fill="#e8f6ff">Automatic security patch lane plus manual panel update route for admins</text>
+</svg>
