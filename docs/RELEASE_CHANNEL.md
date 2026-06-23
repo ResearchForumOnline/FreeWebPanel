@@ -30,11 +30,13 @@ https://freewebpanel.com/downloads/freewebpanel-openzero-aios-install.sh
 
 ## Current Bundle Checksum
 
-Latest bundle checked when this GitHub entry point was prepared:
+Latest bundle checked when this GitHub entry point was updated:
 
 ```text
-B30089C6E17D3056DBC6FDAAECFA7F46FEC6FF4EC3455EAB66DF7052E2C6E6F5  thcz-foundation-latest.tar.gz
+99B40BA21864A9A5212498EB2DF51CF2A76FF090252D4695D741A028D5168EAF  thcz-foundation-latest.tar.gz
 ```
+
+This bundle ships compiled/minified runtime assets, includes `THEME-ASSET-LICENSE.txt`, and strips source maps plus test/spec files from the install/update archive.
 
 The current bundle changes when FreeWebPanel.com publishes a new release. The official website/update channel is authoritative for the latest production bundle.
 
@@ -48,3 +50,4 @@ The GitHub repository should stay clean and useful for installers, documentation
 - Update signing and release staging
 - Paid vendor features
 - Billing and vendor-controlled services
+- Private theme source and Pro theme modules
