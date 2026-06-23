@@ -1,6 +1,6 @@
 # FreeWebPanel
 
-![FreeWebPanel GitHub hero](assets/freewebpanel-github-hero.svg)
+![FreeWebPanel GitHub hero](assets/FreeWebPanelCover.png.png)
 
 [![Website](https://img.shields.io/badge/website-freewebpanel.com-168bff?style=for-the-badge)](https://freewebpanel.com/)
 [![Install](https://img.shields.io/badge/install-GitHub%20wrapper-12c7ff?style=for-the-badge)](#quick-install)
