@@ -155,3 +155,11 @@ https://freewebpanel.com/downloads/thcz-foundation-latest.tar.gz
 ```
 
 GitHub is the public entry point. FreeWebPanel.com remains the official release and support channel.
+
+## Helpful Resources
+
+- Feature map: [FEATURE_MAP.md](FEATURE_MAP.md)
+- Videos and public media: [VIDEOS.md](VIDEOS.md)
+- Project links: [PROJECT_LINKS.md](PROJECT_LINKS.md)
+- GitHub SSH and GPG setup for maintainers: [GITHUB_AUTH_SETUP.md](GITHUB_AUTH_SETUP.md)
+- Licensing and protection model: [LICENSING_AND_PROTECTION.md](LICENSING_AND_PROTECTION.md)
