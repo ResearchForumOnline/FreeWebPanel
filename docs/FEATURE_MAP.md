@@ -14,6 +14,7 @@ FreeWebPanel is built around the daily jobs a hosting admin and a website owner 
 - Firewall and lockout safety guidance for admin and customer IPs.
 - Theme selection: Light, Dark, Midnight, and official compiled runtime themes.
 - Manual update route plus automatic FreeWebPanel update checks.
+- Panel takeover planning for hosts replacing legacy panels in place.
 
 ## Customer Panel
 
@@ -44,7 +45,21 @@ FreeWebPanel is designed to work as a practical Linux hosting stack, with instal
 - Micro, small, and provider server profiles.
 - RHEL-family preflight for AlmaLinux, RockyLinux, and related systems.
 - ZeroMint AIOS / OpenZero AIOS install wrapper.
-- Existing-panel replacement planning with preflight and backup confirmation.
+- In-place panel replacement planning with preflight and backup confirmation.
+- Same-server, same-IP takeover model where the current host state allows it.
+- Panel-specific planning guides for cPanel/WHM, CWP, DirectAdmin, Plesk, CyberPanel, Hestia/Vesta, Webmin/Virtualmin, ISPConfig, aaPanel, and generic/custom stacks.
+
+## Takeover Workflow
+
+1. Inventory the current panel and services.
+2. Export websites, DNS, mail, SQL, SSL, cron, and customer account data.
+3. Verify off-server backups.
+4. Run FreeWebPanel preflight.
+5. Review service mapping.
+6. Confirm takeover only after rollback material exists.
+7. Validate customer-facing services after replacement.
+
+Takeover docs: [migrations/README.md](migrations/README.md)
 
 ## Public Repository Boundary
 
