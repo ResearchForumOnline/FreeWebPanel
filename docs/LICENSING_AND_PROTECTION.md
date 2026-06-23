@@ -16,7 +16,8 @@ The Apache License for Free Core does not grant rights to:
 
 - Sell official FreeWebPanel licenses
 - Claim to be the official FreeWebPanel vendor
-- Use FreeWebPanel names, logos, trade dress, or service marks in a misleading way
+- Use FreeWebPanel names, logos, trade dress, theme identity, or service marks in a misleading way
+- Extract, resell, rebrand, or redistribute official FreeWebPanel themes as a separate product
 - Distribute paid Pro modules as if they were Free Core
 - Access private release signing keys, billing keys, vendor infrastructure, or support systems
 - Bypass official Pro licensing, support, or update channels
@@ -33,11 +34,20 @@ Only FreeWebPanel.com is authorised to sell official FreeWebPanel Pro access, co
 
 A server owner may install Free Core and host their own customers. They may not sell fake FreeWebPanel licenses or claim that unofficial modified builds are official FreeWebPanel releases.
 
+## Theme Asset Boundary
+
+The public GitHub repository is not a full source release of the private panel theme work. Official FreeWebPanel panel themes are delivered to installed servers as compiled/minified runtime assets only. Source maps, private React/TypeScript source, Pro theme modules, signing keys, and vendor release internals stay outside the public repository and install bundle.
+
+Installed servers can run the official panel UI. They may not extract or resell the themes as a separate theme pack or unofficial panel clone.
+
 ## Copy Protection Reality
 
-Public web software cannot be made impossible to copy, especially when an open-source core is published. The practical protection model is:
+Public web software cannot be made impossible to copy, especially when an open-source core is published. Browser-delivered CSS and JavaScript can always be inspected by someone with access to the rendered panel. The practical protection model is:
 
 - Keep Pro modules outside the public repository.
+- Keep private theme source outside the public repository and release bundle.
+- Ship minified production runtime assets without source maps.
+- Strip test/spec/source-adjacent files from install and update bundles.
 - Keep update signing keys and release credentials outside GitHub.
 - Keep payment, license, and billing systems controlled by FreeWebPanel.com.
 - Use official release checksums and staged updates.
@@ -58,6 +68,7 @@ Safe to publish here:
 Keep private or separately distributed:
 
 - Pro module source
+- Private theme source
 - License server internals
 - Private signing keys
 - Payment provider credentials
