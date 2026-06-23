@@ -110,7 +110,16 @@ curl -fsSL https://freewebpanel.com/downloads/freewebpanel-openzero-aios-install
 
 ## Existing Panel Replacement
 
-FreeWebPanel can help plan migrations from legacy hosting panels, but replacing a panel is destructive if you do it without verified backups. Use preflight first.
+FreeWebPanel takeover planning is designed for hosts that want to keep the same server and public IP where safe, then replace the old panel control layer with FreeWebPanel.
+
+Start with the takeover center:
+
+- [migrations/README.md](migrations/README.md)
+- [same-server-same-ip.md](migrations/same-server-same-ip.md)
+- [backup-and-rollback.md](migrations/backup-and-rollback.md)
+- [migration-matrix.md](migrations/migration-matrix.md)
+
+Run preflight first:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ResearchForumOnline/FreeWebPanel/main/install.sh | sudo bash -s -- \
@@ -159,6 +168,7 @@ GitHub is the public entry point. FreeWebPanel.com remains the official release 
 ## Helpful Resources
 
 - Feature map: [FEATURE_MAP.md](FEATURE_MAP.md)
+- Panel takeover center: [migrations/README.md](migrations/README.md)
 - Videos and public media: [VIDEOS.md](VIDEOS.md)
 - Project links: [PROJECT_LINKS.md](PROJECT_LINKS.md)
 - GitHub SSH and GPG setup for maintainers: [GITHUB_AUTH_SETUP.md](GITHUB_AUTH_SETUP.md)
