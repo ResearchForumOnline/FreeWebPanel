@@ -2,6 +2,12 @@
 
 These notes help the project owner push updates from a local machine without relying on browser-only GitHub edits.
 
+Official GitHub references:
+
+- Generating a new SSH key and adding it to the ssh-agent: [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Generating a new GPG key: [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+- Adding a GPG key to your GitHub account: [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
+
 ## 1. Create An SSH Key For GitHub
 
 Open PowerShell and run:
@@ -19,6 +25,7 @@ C:\Users\Administrator\.ssh\github_freewebpanel_ed25519
 Start the SSH agent and add the key:
 
 ```powershell
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 Start-Service ssh-agent
 ssh-add C:\Users\Administrator\.ssh\github_freewebpanel_ed25519
 ```
