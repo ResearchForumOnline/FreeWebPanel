@@ -76,7 +76,30 @@ More media and future video ideas: [docs/VIDEOS.md](docs/VIDEOS.md)
 1. **Ubuntu 24.04 LTS** - production install lane.
 2. **AlmaLinux / RockyLinux / RHEL-family** - preflight validation today, RPM/dnf lane planned.
 3. **ZeroMint AIOS / OpenZero AIOS** - compatibility wrapper for AIOS servers.
-4. **Existing panel replacement** - preflight and guarded takeover planning for hosts migrating away from legacy panels.
+4. **Existing panel replacement** - preflight and guarded takeover planning for hosts moving away from legacy panels.
+
+## In-Place Panel Takeover
+
+![FreeWebPanel panel takeover map](assets/freewebpanel-takeover-map.svg)
+
+FreeWebPanel is built for hosts that want a stronger control panel without rebuilding the whole server estate. The takeover path is designed to keep the same server and public IP where the current server state allows it, then replace the old panel workflow with FreeWebPanel accounts, domains, DNS, SSL, file manager, mail, SQL, backups, security checks, and updates.
+
+Start here: [docs/migrations/README.md](docs/migrations/README.md)
+
+Panel-specific takeover guides:
+
+- [cPanel / WHM to FreeWebPanel](docs/migrations/cpanel-whm-to-freewebpanel.md)
+- [Control Web Panel / CWP to FreeWebPanel](docs/migrations/control-web-panel-cwp-to-freewebpanel.md)
+- [DirectAdmin to FreeWebPanel](docs/migrations/directadmin-to-freewebpanel.md)
+- [Plesk to FreeWebPanel](docs/migrations/plesk-to-freewebpanel.md)
+- [CyberPanel to FreeWebPanel](docs/migrations/cyberpanel-to-freewebpanel.md)
+- [HestiaCP / VestaCP to FreeWebPanel](docs/migrations/hestia-vesta-to-freewebpanel.md)
+- [Webmin / Virtualmin to FreeWebPanel](docs/migrations/webmin-virtualmin-to-freewebpanel.md)
+- [ISPConfig to FreeWebPanel](docs/migrations/ispconfig-to-freewebpanel.md)
+- [aaPanel to FreeWebPanel](docs/migrations/aapanel-to-freewebpanel.md)
+- [Generic panel takeover](docs/migrations/generic-panel-takeover.md)
+
+Takeover always starts with preflight and verified off-server backups. FreeWebPanel should stop for operator review when it cannot safely map a service.
 
 ## DNS Before Install
 
