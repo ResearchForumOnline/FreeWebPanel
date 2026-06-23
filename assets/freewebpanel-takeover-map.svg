@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">FreeWebPanel in-place panel takeover map</title>
+  <desc id="desc">Dark migration diagram showing old hosting panels feeding into FreeWebPanel without moving server or changing IP where safe.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020812"/><stop offset="0.52" stop-color="#061a31"/><stop offset="1" stop-color="#00101f"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#20e6c7"/><stop offset="1" stop-color="#168bff"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/></filter>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#143a60" stroke-width="1" opacity="0.32"/></pattern>
+  </defs>
+  <rect width="1200" height="520" rx="34" fill="url(#bg)"/>
+  <rect width="1200" height="520" fill="url(#grid)"/>
+  <text x="72" y="80" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="46" font-weight="900" fill="#fff">In-place panel takeover</text>
+  <text x="72" y="118" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" fill="#bdd2e8">Keep the server and IP where safe. Replace the control layer with FreeWebPanel.</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800" font-size="18" fill="#eaf7ff">
+    <g transform="translate(70 172)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">cPanel / WHM</text></g>
+    <g transform="translate(70 246)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">CWP</text></g>
+    <g transform="translate(70 320)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">DirectAdmin</text></g>
+    <g transform="translate(70 394)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">Plesk</text></g>
+    <g transform="translate(305 172)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">CyberPanel</text></g>
+    <g transform="translate(305 246)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">Hestia / Vesta</text></g>
+    <g transform="translate(305 320)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">Virtualmin</text></g>
+    <g transform="translate(305 394)"><rect width="180" height="58" rx="18" fill="#0c2138" stroke="#1e5d91"/><text x="90" y="36" text-anchor="middle">ISPConfig / aaPanel</text></g>
+  </g>
+  <path d="M520 270h150" stroke="#2be6ff" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <path d="M650 248l35 22-35 22" fill="none" stroke="#2be6ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(705 138)" filter="url(#s)">
+    <rect width="420" height="255" rx="30" fill="#071526" stroke="#2c79bf"/>
+    <rect x="26" y="28" width="368" height="72" rx="18" fill="url(#a)"/>
+    <text x="210" y="73" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="950" fill="#00111e">FreeWebPanel</text>
+    <g font-family="Inter,Segoe UI,Arial,sans-serif" fill="#dcefff">
+      <text x="42" y="142" font-size="20" font-weight="850">Preflight</text>
+      <text x="42" y="178" font-size="20" font-weight="850">Backups</text>
+      <text x="42" y="214" font-size="20" font-weight="850">Controlled takeover</text>
+      <text x="245" y="142" font-size="20" font-weight="850">Same server</text>
+      <text x="245" y="178" font-size="20" font-weight="850">Same IP</text>
+      <text x="245" y="214" font-size="20" font-weight="850">New panel</text>
+    </g>
+  </g>
+  <text x="600" y="480" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800" fill="#e7f6ff">Designed for verified backups, service inventory, rollback notes, and a safer replacement window.</text>
+</svg>
