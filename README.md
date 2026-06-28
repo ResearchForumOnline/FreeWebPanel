@@ -4,6 +4,7 @@
 
 [![Website](https://img.shields.io/badge/website-freewebpanel.com-168bff?style=for-the-badge)](https://freewebpanel.com/)
 [![Install](https://img.shields.io/badge/install-GitHub%20wrapper-12c7ff?style=for-the-badge)](#quick-install)
+[![ZSEC](https://img.shields.io/badge/security-ZSEC%20Auto%20Updates-16a34a?style=for-the-badge)](https://github.com/ResearchForumOnline/ZSEC)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04%20LTS-e95420?style=for-the-badge)](docs/INSTALL.md)
 [![Free Core](https://img.shields.io/badge/Free%20Core-public-15c8a8?style=for-the-badge)](docs/LICENSING_AND_PROTECTION.md)
 [![Videos](https://img.shields.io/badge/videos-YouTube-red?style=for-the-badge)](docs/VIDEOS.md)
@@ -20,7 +21,7 @@ Hosting should not start with a license bill before a server has customers. Free
 - Create hosting accounts and customer workspaces.
 - Launch real websites with DNS, SSL, files, email, SQL, and backups.
 - Keep security updates moving without paying extra for basic patch flow.
-- Add official Pro/support when the server is ready for serious commercial use.
+- Add official Pro/support when the hosting business needs it.
 
 ## Quick Install
 
@@ -117,6 +118,8 @@ If using Cloudflare, keep these records **DNS only / grey cloud**. Do not proxy 
 
 - Website: [https://freewebpanel.com/](https://freewebpanel.com/)
 - GitHub: [https://github.com/ResearchForumOnline/FreeWebPanel](https://github.com/ResearchForumOnline/FreeWebPanel)
+- ZSEC Auto Updates: [https://github.com/ResearchForumOnline/ZSEC](https://github.com/ResearchForumOnline/ZSEC)
+- ZSEC public page: [https://talktoai.org/zsec/](https://talktoai.org/zsec/)
 - Videos: [https://www.youtube.com/@quantumzero101/videos](https://www.youtube.com/@quantumzero101/videos)
 - TalkToAI: [https://talktoai.org/](https://talktoai.org/)
 - OpenZero AIOS: [https://openzero.talktoai.org/](https://openzero.talktoai.org/)
@@ -139,6 +142,8 @@ For project maintainers who want cleaner local pushes, signed commits, and SSH r
 ## Security
 
 FreeWebPanel is a hosting control panel and should be installed only on a clean server you control. Do not run public install commands on a production host until you have backups and have reviewed the flags you are using.
+
+ZSEC Auto Updates is the companion Linux security updater from FreeWebPanel.com and TalkToAI. It focuses on security-only update checks, lockout-resistant SSH safety, and hardening support for Ubuntu, AlmaLinux, and Rocky Linux: [ResearchForumOnline/ZSEC](https://github.com/ResearchForumOnline/ZSEC).
 
 Security reports: [SECURITY.md](SECURITY.md)
 
