@@ -44,6 +44,18 @@ After installation:
 
 Full install guide: [docs/INSTALL.md](docs/INSTALL.md)
 
+## Public Docs
+
+- [Install guide](docs/INSTALL.md)
+- [Feature map](docs/FEATURE_MAP.md)
+- [Provider operations guide](docs/PROVIDER_OPERATIONS.md)
+- [Migration and panel takeover center](docs/migrations/README.md)
+- [Official release channel](docs/RELEASE_CHANNEL.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
+
 ## What Free Core Includes
 
 | Area | Included |
