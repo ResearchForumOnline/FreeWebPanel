@@ -4,6 +4,14 @@ This page collects public videos and project media for FreeWebPanel and related 
 
 ## Featured FreeWebPanel Videos
 
+### TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure
+
+[![TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure](https://i.ytimg.com/vi/R52hsRdCmSM/hqdefault.jpg)](https://www.youtube.com/watch?v=R52hsRdCmSM)
+
+Watch: [https://www.youtube.com/watch?v=R52hsRdCmSM](https://www.youtube.com/watch?v=R52hsRdCmSM)
+
+Use this as the main ecosystem overview when explaining how TalkToAI, ZeroThink, OpenZero, local-first infrastructure, and related products connect.
+
 ### FreeWebPanel Explained Easy Hosting
 
 [![FreeWebPanel Explained Easy Hosting](https://i.ytimg.com/vi/XmHH54gGl4Y/hqdefault.jpg)](https://www.youtube.com/watch?v=XmHH54gGl4Y)

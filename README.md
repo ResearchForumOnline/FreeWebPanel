@@ -74,6 +74,12 @@ Feature map: [docs/FEATURE_MAP.md](docs/FEATURE_MAP.md)
 
 ## Featured Videos
 
+### TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure
+
+[![TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure](https://i.ytimg.com/vi/R52hsRdCmSM/hqdefault.jpg)](https://www.youtube.com/watch?v=R52hsRdCmSM)
+
+This is the wider ecosystem overview for TalkToAI, ZeroThink, OpenZero, local-first infrastructure, and the connected product stack that FreeWebPanel sits beside.
+
 ### FreeWebPanel Explained Easy Hosting
 
 [![FreeWebPanel Explained Easy Hosting](https://i.ytimg.com/vi/XmHH54gGl4Y/hqdefault.jpg)](https://www.youtube.com/watch?v=XmHH54gGl4Y)
