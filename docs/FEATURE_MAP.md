@@ -10,6 +10,8 @@ FreeWebPanel is built around the daily jobs a hosting admin and a website owner 
 - File manager with upload, extract, rename, move, delete, edit, and guarded write actions.
 - Mailboxes, forwards, webmail launchers, and email deliverability checks.
 - SQL database and database-user workflows with phpMyAdmin/Adminer launch paths.
+- Built-in app installers plus optional Softaculous Remote/custom-panel bridge for providers with a Softaculous licence.
+- WordPress Toolkit style maintenance flows, with room for Softaculous WordPress Manager where configured.
 - Backups, restore points, logs, metrics, repair checks, and update posture.
 - Firewall and lockout safety guidance for admin and customer IPs.
 - Theme selection: Light, Dark, Midnight, and official compiled runtime themes.
@@ -24,7 +26,7 @@ FreeWebPanel is built around the daily jobs a hosting admin and a website owner 
 - DNS and SSL visibility for owned domains.
 - Email and mailbox management where enabled by the provider.
 - Database workflows where enabled by the provider.
-- Installers and app routes where enabled by the provider.
+- Installers and app routes where enabled by the provider, including optional Softaculous catalogue access on licensed hosts.
 - Usage visibility for disk, websites, databases, mailboxes, backups, and traffic.
 
 ## Server Stack Direction
@@ -35,6 +37,7 @@ FreeWebPanel is designed to work as a practical Linux hosting stack, with instal
 - Apache compatibility planning where needed.
 - Reverse proxy and app routes.
 - Open-source database and webmail tools.
+- Optional third-party script-installer bridge for Softaculous Remote or native custom-panel adapter deployments.
 - Security patch automation.
 - Controlled updates that keep rollback pointers.
 - ZeroMint AIOS and OpenZero AIOS compatibility wrappers.

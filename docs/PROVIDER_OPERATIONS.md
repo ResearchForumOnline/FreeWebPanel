@@ -24,6 +24,7 @@ Use this order when preparing a production server:
 - Review mail deliverability records for new customer domains.
 - Keep public DNS and nameserver records consistent.
 - Check pending panel and operating system updates.
+- If Softaculous is enabled, confirm the Remote/custom-panel bridge, API pass rotation date, and staging install test still pass.
 
 ## Customer Onboarding
 
@@ -35,7 +36,21 @@ For each customer, record:
 - DNS provider and nameserver plan
 - SSL expectations and redirect preference
 - backup retention expectation
+- whether built-in installers are enough or the account needs the optional Softaculous catalogue
 - support contact and escalation route
+
+## Optional Softaculous Bridge
+
+Softaculous support is provider-owned and licensed. FreeWebPanel can store the Softaculous API pass in the integration vault and show customers an expanded app catalogue lane after the provider configures Softaculous Remote or a native custom-panel adapter.
+
+Operational rules:
+
+1. Keep the Softaculous service endpoint server-side and provider-owned.
+2. Do not ask customers to paste arbitrary Softaculous URLs into the browser.
+3. Test installs, clone/staging, imports, backups, restores, and updates against a staging account before advertising the lane.
+4. Keep FreeWebPanel built-in installers available as the simple fallback.
+
+Full guide: [SOFTACULOUS.md](SOFTACULOUS.md)
 
 ## Existing Panel Replacement
 

@@ -5,6 +5,7 @@
 [![Website](https://img.shields.io/badge/website-freewebpanel.com-168bff?style=for-the-badge)](https://freewebpanel.com/)
 [![Install](https://img.shields.io/badge/install-GitHub%20wrapper-12c7ff?style=for-the-badge)](#quick-install)
 [![ZSEC](https://img.shields.io/badge/security-ZSEC%20Auto%20Updates-16a34a?style=for-the-badge)](https://github.com/ResearchForumOnline/ZSEC)
+[![Softaculous](https://img.shields.io/badge/Softaculous-bridge-f59e0b?style=for-the-badge)](docs/SOFTACULOUS.md)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04%20LTS-e95420?style=for-the-badge)](docs/INSTALL.md)
 [![Free Core](https://img.shields.io/badge/Free%20Core-public-15c8a8?style=for-the-badge)](docs/LICENSING_AND_PROTECTION.md)
 [![Videos](https://img.shields.io/badge/videos-YouTube-red?style=for-the-badge)](docs/VIDEOS.md)
@@ -62,6 +63,7 @@ FreeWebPanel is designed to be found by people searching for a free hosting cont
 - [Install guide](docs/INSTALL.md)
 - [Downloads, releases, and updates](docs/DOWNLOADS_AND_RELEASES.md)
 - [Feature map](docs/FEATURE_MAP.md)
+- [Softaculous bridge](docs/SOFTACULOUS.md)
 - [Provider operations guide](docs/PROVIDER_OPERATIONS.md)
 - [Migration and panel takeover center](docs/migrations/README.md)
 - [Official release channel](docs/RELEASE_CHANNEL.md)
@@ -79,6 +81,7 @@ FreeWebPanel is designed to be found by people searching for a free hosting cont
 | Domains | DNS records, aliases, subdomains, nameserver guidance, AutoSSL and redirects |
 | Mail | Mailboxes, forwards, webmail launchers, SPF/DKIM/DMARC-style deliverability checks |
 | SQL | Database workflows, users, phpMyAdmin/Adminer launcher flow |
+| Installers | Built-in app installers plus optional provider-owned Softaculous bridge |
 | Security | Guarded file writes, firewall guidance, lockout safety, service checks, update lane |
 | Updates | Automatic FreeWebPanel core checks plus manual admin update route |
 | Themes | Light, Dark, Midnight, and official compiled runtime panel themes |

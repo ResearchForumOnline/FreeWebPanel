@@ -4,6 +4,8 @@ Notable public repository updates are tracked here. Production release bundles r
 
 ## 2026-07-04
 
+- Added Softaculous bridge documentation for provider-owned Remote and custom-panel integrations.
+- Updated README, feature map, and provider operations docs to show built-in installers plus optional licensed Softaculous catalogue support.
 - Added public project governance docs for contributors, operators, and providers.
 - Linked the public roadmap and provider operations guide from the README.
 - Clarified the GitHub repository boundary around Free Core, documentation, public installers, and protected official release assets.
