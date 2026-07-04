@@ -44,9 +44,23 @@ After installation:
 
 Full install guide: [docs/INSTALL.md](docs/INSTALL.md)
 
+## Downloads, Releases, And Updates
+
+| Need | Link |
+| --- | --- |
+| Latest GitHub source archive | [Download ZIP](https://github.com/ResearchForumOnline/FreeWebPanel/archive/refs/heads/main.zip) |
+| GitHub releases | [FreeWebPanel releases](https://github.com/ResearchForumOnline/FreeWebPanel/releases) |
+| Official release channel | [docs/RELEASE_CHANNEL.md](docs/RELEASE_CHANNEL.md) |
+| Install guide | [docs/INSTALL.md](docs/INSTALL.md) |
+| Feature map | [docs/FEATURE_MAP.md](docs/FEATURE_MAP.md) |
+| Provider operations | [docs/PROVIDER_OPERATIONS.md](docs/PROVIDER_OPERATIONS.md) |
+
+FreeWebPanel is designed to be found by people searching for a free hosting control panel, self-hosted web panel, cPanel alternative, DirectAdmin alternative, Linux hosting panel, free web hosting panel, DNS and SSL hosting control panel, mail and SQL panel, and provider-ready hosting automation.
+
 ## Public Docs
 
 - [Install guide](docs/INSTALL.md)
+- [Downloads, releases, and updates](docs/DOWNLOADS_AND_RELEASES.md)
 - [Feature map](docs/FEATURE_MAP.md)
 - [Provider operations guide](docs/PROVIDER_OPERATIONS.md)
 - [Migration and panel takeover center](docs/migrations/README.md)
