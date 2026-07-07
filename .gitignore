@@ -1,0 +1,56 @@
+# Local runtime and operator secrets
+.env
+.env.*
+!.env.example
+secrets/
+private/
+backups/
+runtime/
+uploads/
+storage/
+customer-data/
+
+# Credentials, keys, certificates, and panel exports
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+client_secret*.json
+*cookies*.txt
+*credentials*.txt
+*_CREDENTIALS.txt
+
+# Databases and logs
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+*.log
+*.pid
+
+# Build, package, and backup artifacts
+node_modules/
+vendor/
+dist/
+build/
+__pycache__/
+*.pyc
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.bak
+*.old
+*.tmp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
