@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Shell syntax
         run: bash -n install.sh
 
       - name: Node setup
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
@@ -43,7 +43,7 @@ jobs:
           missing = []
 
           for path in root.rglob("*.md"):
-              if ".git" in path.parts:
+              if any(part in {".git", "node_modules", "dist"} for part in path.parts):
                   continue
               text = path.read_text(encoding="utf-8", errors="replace")
               for match in link_re.finditer(text):
