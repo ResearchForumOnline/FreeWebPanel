@@ -12,7 +12,9 @@
 
 **FreeWebPanel Free Core** is the public entry point for a real Linux hosting business: install on a clean Ubuntu server, create hosting accounts, publish websites, manage mail, SQL, files, domains, SSL, security, backups, updates, and customer workspaces, then grow into official Pro or support when the server starts earning.
 
-This GitHub repository is the public front door for installs, documentation, videos, and safe project discovery. The official release bundle, update channel, Pro licensing, paid support, commercial response, and protected runtime assets are served from [freewebpanel.com](https://freewebpanel.com/).
+This GitHub repository now includes the first buildable [Free Core control-plane source](core/README.md), alongside installs, documentation, videos, and safe project discovery. The official release bundle, update channel, Pro licensing, paid support, commercial response, and protected runtime assets are served from [freewebpanel.com](https://freewebpanel.com/).
+
+The source boundary is deliberate: public Core code is testable here, while Pro automation, payment settlement, signing keys, customer data, private themes, and production inventory remain outside the repository.
 
 ## Why FreeWebPanel Exists
 
@@ -60,6 +62,7 @@ FreeWebPanel is designed to be found by people searching for a free hosting cont
 
 ## Public Docs
 
+- [Buildable Free Core source](core/README.md)
 - [Install guide](docs/INSTALL.md)
 - [Downloads, releases, and updates](docs/DOWNLOADS_AND_RELEASES.md)
 - [Feature map](docs/FEATURE_MAP.md)
@@ -88,6 +91,17 @@ FreeWebPanel is designed to be found by people searching for a free hosting cont
 | Growth | Free Core first, official Pro/support when the hosting business needs it |
 
 Feature map: [docs/FEATURE_MAP.md](docs/FEATURE_MAP.md)
+
+## Build The Public Core
+
+```bash
+cd core/api
+npm install
+npm test
+npm run build
+```
+
+The current source slice implements the unprivileged control-plane foundation: clean owner initialization, secure sessions, customer accounts, domain validation, constrained site-root creation, and auditable state. The hosted installer remains the supported route for the broader compiled panel while privileged web, mail, DNS, SQL, and certificate workers are prepared for separate public review.
 
 ## Featured Videos
 

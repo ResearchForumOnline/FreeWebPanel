@@ -2,6 +2,14 @@
 
 Notable public repository updates are tracked here. Production release bundles remain controlled by FreeWebPanel.com.
 
+## 2026-07-10
+
+- Published the first buildable Free Core control-plane source under `core/api`.
+- Added production-clean state initialization with no demo customers or fake billing records.
+- Added scrypt owner authentication, hashed sessions, atomic mode-`0600` state, login throttling, account creation, strict domain validation, and constrained site-root provisioning.
+- Added Core API lint, tests, and build checks to GitHub Actions.
+- Documented the exact public/private boundary instead of implying that private Pro or production assets are open source.
+
 ## 2026-07-04
 
 - Added Softaculous bridge documentation for provider-owned Remote and custom-panel integrations.
