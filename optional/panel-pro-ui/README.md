@@ -1,20 +1,16 @@
-# FreeWebPanel Pro UI overlay
+# FreeWebPanel Pro UI overlay (safe)
 
-Scoped dark admin/user shell enhancements for production FreeWebPanel.
+Scoped enhancements for `/admin` and `/user` only.
 
-## What it does
+## Safety rules
+- Never inject DOM into React-managed trees (body only)
+- Do not wrap `history.pushState` / `replaceState`
+- Marketing/SEO pages stay unstyled by pro shell
 
-- Dark, dense, modern admin + end-user shell (cPanel-class density)
-- Command palette: `Ctrl/Cmd+K`
-- Owner automation strip on `/admin/*` (PayPal / health / invoices)
-- **Does not** modify marketing SEO markup (meta, JSON-LD, robots, sitemap)
+## Features
+- Gentle visual polish (sidebar, cards, buttons)
+- Command palette: Ctrl/Cmd+K
+- Owner automation strip (admin): PayPal / health / invoices
 
-## Files
-
-- `/assets/pro/fwp-pro-ui.css`
-- `/assets/pro/fwp-pro-ui.js`
-- Injected from `index.html` only as two tags before `</head>` / `</body>`
-
-## Rollback
-
-Restore previous `index.html` from `index.html.bak-ui-*` and remove `/assets/pro/`.
+## Install
+Copy files to `/assets/pro/` and link from `index.html` before `</head>` / `</body>`.

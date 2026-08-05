@@ -1,299 +1,64 @@
-/* FreeWebPanel Pro UI — admin + end-user shell only.
-   Scoped to panel shells so marketing/SEO pages stay untouched. */
+/* FreeWebPanel Pro UI — SAFE overlay
+   Only styles admin/user when body.fwp-pro-panel is set.
+   Marketing/SEO pages must remain unaffected. */
 
-:root {
-  --fwp-ink: #e8eef8;
-  --fwp-muted: #93a0b8;
-  --fwp-line: rgba(148, 163, 184, 0.16);
-  --fwp-line-strong: rgba(99, 140, 255, 0.28);
-  --fwp-surface: rgba(15, 23, 42, 0.92);
-  --fwp-surface-2: rgba(30, 41, 59, 0.88);
-  --fwp-accent: #3b82f6;
-  --fwp-accent-2: #22d3ee;
-  --fwp-ok: #34d399;
-  --fwp-warn: #fbbf24;
-  --fwp-danger: #fb7185;
-  --fwp-radius: 14px;
-  --fwp-shadow: 0 18px 50px rgba(2, 8, 23, 0.45);
+/* Owner strip + command palette live on body (outside React) */
+#fwp-auto-strip {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99990;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  max-width: min(1100px, calc(100vw - 1.25rem));
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  background: linear-gradient(90deg, rgba(8, 47, 73, 0.96), rgba(15, 23, 42, 0.96));
+  color: #e0f2fe;
+  font: 600 0.82rem/1.3 "Segoe UI", system-ui, sans-serif;
+  box-shadow: 0 12px 36px rgba(2, 8, 23, 0.45);
 }
-
-/* Activate pro shell on admin/user routes via body class set by enhance.js */
-body.fwp-pro-panel {
-  background:
-    radial-gradient(circle at 8% 0%, rgba(59, 130, 246, 0.18), transparent 34%),
-    radial-gradient(circle at 92% 8%, rgba(34, 211, 238, 0.12), transparent 28%),
-    linear-gradient(160deg, #020617 0%, #0b1220 48%, #111827 100%) !important;
-  color: var(--fwp-ink) !important;
-  font-family: "Segoe UI", Inter, Manrope, system-ui, sans-serif !important;
+#fwp-auto-strip[hidden] { display: none !important; }
+#fwp-auto-strip strong { color: #67e8f9; font-weight: 800; }
+#fwp-auto-strip .pill {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.55);
+  font-size: 0.74rem;
+  font-weight: 700;
 }
-
-body.fwp-pro-panel:before,
-body.fwp-pro-panel:after {
-  opacity: 0.35 !important;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
-  background-size: 64px 64px !important;
-}
-
-/* Panel layout */
-body.fwp-pro-panel .page-shell-panel,
-body.fwp-pro-panel .panel-skin-admin,
-body.fwp-pro-panel .panel-skin-user {
-  width: min(1680px, calc(100% - 1rem)) !important;
-  margin: 0.6rem auto !important;
-  color: var(--fwp-ink) !important;
-}
-
-body.fwp-pro-panel .page-shell-panel .panel-main,
-body.fwp-pro-panel .panel-skin-admin .panel-main,
-body.fwp-pro-panel .panel-skin-user .panel-main {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.94)) !important;
-  border: 1px solid var(--fwp-line) !important;
-  border-radius: 18px !important;
-  box-shadow: var(--fwp-shadow) !important;
-  backdrop-filter: blur(14px);
-}
-
-/* Sidebar — cPanel-class density, modern dark */
-body.fwp-pro-panel .sidebar {
-  background: linear-gradient(180deg, #0a1628 0%, #0f1c31 50%, #0b1524 100%) !important;
-  border-right: 1px solid var(--fwp-line) !important;
-  border-radius: 16px 0 0 16px !important;
-  min-width: 248px !important;
-  padding: 0.75rem 0.55rem 1rem !important;
-}
-
-body.fwp-pro-panel .sidebar-head {
-  padding: 0.85rem 0.75rem 1rem !important;
-  border-bottom: 1px solid var(--fwp-line) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-body.fwp-pro-panel .sidebar-head strong,
-body.fwp-pro-panel .sidebar-head h1,
-body.fwp-pro-panel .sidebar-head h2 {
-  color: #f8fafc !important;
-  letter-spacing: -0.02em !important;
-}
-
-body.fwp-pro-panel .sidebar-nav,
-body.fwp-pro-panel .sidebar-nav-group {
-  gap: 0.2rem !important;
-}
-
-body.fwp-pro-panel .sidebar-nav-label,
-body.fwp-pro-panel .sidebar-nav-head {
-  color: #64748b !important;
-  font-size: 0.68rem !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  margin: 0.85rem 0.65rem 0.35rem !important;
-}
-
-body.fwp-pro-panel .sidebar-link,
-body.fwp-pro-panel a.sidebar-link {
-  color: #cbd5e1 !important;
-  border-radius: 10px !important;
-  padding: 0.58rem 0.7rem !important;
-  border: 1px solid transparent !important;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
-  font-weight: 600 !important;
-  font-size: 0.9rem !important;
+#fwp-auto-strip .pill.ok { border-color: rgba(52, 211, 153, 0.4); color: #6ee7b7; }
+#fwp-auto-strip .pill.warn { border-color: rgba(251, 191, 36, 0.4); color: #fcd34d; }
+#fwp-auto-strip button {
+  border-radius: 9px !important;
+  min-height: 32px !important;
+  padding: 0.35rem 0.7rem !important;
+  font-size: 0.75rem !important;
   text-transform: none !important;
   letter-spacing: 0 !important;
-  min-height: 0 !important;
+  cursor: pointer;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(148, 163, 184, 0.1);
+  color: #e2e8f0;
+  font-weight: 700;
 }
-
-body.fwp-pro-panel .sidebar-link:hover {
-  background: rgba(59, 130, 246, 0.12) !important;
-  border-color: rgba(59, 130, 246, 0.25) !important;
-  color: #fff !important;
+#fwp-auto-strip #fwp-auto-billing-link {
+  border: 0;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: #04101f;
 }
+#fwp-auto-strip #fwp-auto-cmdk { margin-left: 0.25rem; }
 
-body.fwp-pro-panel .sidebar-link.active,
-body.fwp-pro-panel .sidebar-link[aria-current="page"] {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.28), rgba(34, 211, 238, 0.08)) !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
-  color: #fff !important;
-  box-shadow: inset 3px 0 0 #3b82f6 !important;
-}
-
-body.fwp-pro-panel .sidebar-link-badge {
-  background: rgba(34, 211, 238, 0.15) !important;
-  color: #67e8f9 !important;
-  border: 1px solid rgba(34, 211, 238, 0.25) !important;
-}
-
-/* Header */
-body.fwp-pro-panel .panel-header,
-body.fwp-pro-panel .panel-header-main,
-body.fwp-pro-panel .app-page-header {
-  background: rgba(15, 23, 42, 0.75) !important;
-  border-bottom: 1px solid var(--fwp-line) !important;
-  color: var(--fwp-ink) !important;
-  backdrop-filter: blur(10px);
-}
-
-body.fwp-pro-panel .panel-header h1,
-body.fwp-pro-panel .panel-header h2,
-body.fwp-pro-panel .section-header h2,
-body.fwp-pro-panel .workspace-section-intro h2 {
-  color: #f8fafc !important;
-}
-
-body.fwp-pro-panel .muted,
-body.fwp-pro-panel .panel-header p,
-body.fwp-pro-panel .section-copy,
-body.fwp-pro-panel .workspace-summary-copy {
-  color: var(--fwp-muted) !important;
-}
-
-/* Cards / tools — denser cPanel-like grids */
-body.fwp-pro-panel .card,
-body.fwp-pro-panel .control-card,
-body.fwp-pro-panel .command-card,
-body.fwp-pro-panel .cpanel-tool-card,
-body.fwp-pro-panel .workspace-card,
-body.fwp-pro-panel .billing-stat-card,
-body.fwp-pro-panel .billing-plan-card,
-body.fwp-pro-panel .health-section-card,
-body.fwp-pro-panel .user-action-card {
-  background: linear-gradient(165deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.95)) !important;
-  border: 1px solid var(--fwp-line) !important;
-  border-radius: var(--fwp-radius) !important;
-  box-shadow: 0 10px 28px rgba(2, 8, 23, 0.28) !important;
-  color: var(--fwp-ink) !important;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
-}
-
-body.fwp-pro-panel .cpanel-tool-card:hover,
-body.fwp-pro-panel .user-action-card:hover,
-body.fwp-pro-panel .control-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--fwp-line-strong) !important;
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.18) !important;
-}
-
-body.fwp-pro-panel .cpanel-tool-grid,
-body.fwp-pro-panel .cpanel-dashboard-grid,
-body.fwp-pro-panel .user-resource-grid,
-body.fwp-pro-panel .business-dashboard-grid {
-  gap: 0.75rem !important;
-}
-
-body.fwp-pro-panel .cpanel-tool-icon {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(34, 211, 238, 0.12)) !important;
-  border: 1px solid rgba(59, 130, 246, 0.3) !important;
-  color: #93c5fd !important;
-}
-
-body.fwp-pro-panel .cpanel-section-title,
-body.fwp-pro-panel .cpanel-tool-group-head,
-body.fwp-pro-panel .panel-live-section-head {
-  color: #e2e8f0 !important;
-  border-color: var(--fwp-line) !important;
-}
-
-/* Forms */
-body.fwp-pro-panel input,
-body.fwp-pro-panel select,
-body.fwp-pro-panel textarea {
-  background: rgba(2, 6, 23, 0.7) !important;
-  border: 1px solid var(--fwp-line) !important;
-  color: #f1f5f9 !important;
-  border-radius: 10px !important;
-}
-
-body.fwp-pro-panel input:focus,
-body.fwp-pro-panel select:focus,
-body.fwp-pro-panel textarea:focus {
-  border-color: rgba(59, 130, 246, 0.55) !important;
-  outline: 2px solid rgba(59, 130, 246, 0.2) !important;
-}
-
-body.fwp-pro-panel button,
-body.fwp-pro-panel .button-link,
-body.fwp-pro-panel .button {
-  border-radius: 11px !important;
-  text-transform: none !important;
-  letter-spacing: 0.01em !important;
-  font-weight: 700 !important;
-}
-
-body.fwp-pro-panel .button-primary,
-body.fwp-pro-panel button.button-primary,
-body.fwp-pro-panel .button.button-primary {
-  background: linear-gradient(135deg, #2563eb, #06b6d4) !important;
-  color: #04101f !important;
-  border: 0 !important;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28) !important;
-}
-
-body.fwp-pro-panel .button-secondary,
-body.fwp-pro-panel button.button-secondary {
-  background: rgba(148, 163, 184, 0.08) !important;
-  border: 1px solid var(--fwp-line) !important;
-  color: #e2e8f0 !important;
-}
-
-/* Tables */
-body.fwp-pro-panel table,
-body.fwp-pro-panel .resource-table,
-body.fwp-pro-panel .workflow-table,
-body.fwp-pro-panel .panel-service-table,
-body.fwp-pro-panel .file-manager-table {
-  color: var(--fwp-ink) !important;
-  border-color: var(--fwp-line) !important;
-}
-
-body.fwp-pro-panel th {
-  background: rgba(30, 41, 59, 0.9) !important;
-  color: #cbd5e1 !important;
-  font-size: 0.78rem !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-}
-
-body.fwp-pro-panel td {
-  border-color: rgba(148, 163, 184, 0.1) !important;
-}
-
-body.fwp-pro-panel tr:hover td {
-  background: rgba(59, 130, 246, 0.06) !important;
-}
-
-/* Login shells */
-body.fwp-pro-panel .panel-login-shell,
-body.fwp-pro-panel .panel-login-shell-modern,
-body.fwp-pro-panel .page-shell-auth {
-  color: var(--fwp-ink) !important;
-}
-
-body.fwp-pro-panel .panel-login-card,
-body.fwp-pro-panel .panel-login-side {
-  background: rgba(15, 23, 42, 0.94) !important;
-  border: 1px solid var(--fwp-line) !important;
-  border-radius: 18px !important;
-  box-shadow: var(--fwp-shadow) !important;
-}
-
-/* File manager */
-body.fwp-pro-panel .file-manager-shell,
-body.fwp-pro-panel .file-manager-shell-pro {
-  background: rgba(2, 6, 23, 0.55) !important;
-}
-
-body.fwp-pro-panel .file-sidebar {
-  background: #0b1524 !important;
-  border-color: var(--fwp-line) !important;
-}
-
-/* Floating command palette (injected) */
 #fwp-cmdk-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 99999;
+  z-index: 100000;
   background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(8px);
   display: none;
@@ -310,6 +75,7 @@ body.fwp-pro-panel .file-sidebar {
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
   overflow: hidden;
   color: #e2e8f0;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 #fwp-cmdk input {
   width: 100%;
@@ -320,6 +86,7 @@ body.fwp-pro-panel .file-sidebar {
   padding: 1rem 1.1rem;
   font-size: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 #fwp-cmdk-list {
   max-height: 360px;
@@ -342,6 +109,7 @@ body.fwp-pro-panel .file-sidebar {
   text-transform: none;
   letter-spacing: 0;
   min-height: 0;
+  font-size: 0.92rem;
 }
 #fwp-cmdk-list button:hover,
 #fwp-cmdk-list button.active {
@@ -356,128 +124,102 @@ body.fwp-pro-panel .file-sidebar {
   border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
-/* Owner automation strip */
-#fwp-auto-strip {
-  display: none;
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  margin: 0 0 0.75rem;
-  padding: 0.65rem 0.9rem;
-  border-radius: 12px;
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  background: linear-gradient(90deg, rgba(8, 47, 73, 0.95), rgba(15, 23, 42, 0.95));
-  color: #e0f2fe;
-  gap: 0.75rem;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-}
-body.fwp-pro-panel.fwp-is-admin #fwp-auto-strip { display: flex; }
-#fwp-auto-strip strong { color: #67e8f9; }
-#fwp-auto-strip .pill {
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  color: #cbd5e1;
-  background: rgba(15, 23, 42, 0.55);
-  font-size: 0.75rem;
-}
-#fwp-auto-strip .pill.ok { border-color: rgba(52, 211, 153, 0.35); color: #6ee7b7; }
-#fwp-auto-strip .pill.warn { border-color: rgba(251, 191, 36, 0.35); color: #fcd34d; }
-#fwp-auto-strip button {
-  margin-left: auto;
-  min-height: 34px !important;
-  padding: 0.4rem 0.75rem !important;
-  font-size: 0.78rem !important;
+/* ===== Panel polish (admin/user only) ===== */
+body.fwp-pro-panel {
+  /* soften only; do not force full-page rewrite that breaks layout engines */
 }
 
-/* Scrollbars */
-body.fwp-pro-panel *::-webkit-scrollbar { width: 10px; height: 10px; }
-body.fwp-pro-panel *::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.28);
-  border-radius: 999px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+/* Give room for fixed owner strip on admin */
+body.fwp-pro-panel.fwp-is-admin {
+  scroll-padding-top: 64px;
 }
 
-/* Mobile density */
-@media (max-width: 900px) {
-  body.fwp-pro-panel .sidebar {
-    min-width: 0 !important;
-    border-radius: 16px !important;
+/* Sidebar readability upgrades without destroying flex layout */
+body.fwp-pro-panel .sidebar {
+  background: linear-gradient(180deg, #0b1a2d 0%, #10233a 52%, #0c1b2d 100%) !important;
+  border-color: rgba(148, 163, 184, 0.14) !important;
+}
+
+body.fwp-pro-panel .sidebar-link,
+body.fwp-pro-panel a.sidebar-link {
+  border-radius: 10px !important;
+  transition: background 0.12s ease, color 0.12s ease !important;
+}
+
+body.fwp-pro-panel .sidebar-link:hover {
+  background: rgba(59, 130, 246, 0.14) !important;
+  color: #fff !important;
+}
+
+body.fwp-pro-panel .sidebar-link.active,
+body.fwp-pro-panel .sidebar-link[aria-current="page"] {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.28), rgba(34, 211, 238, 0.08)) !important;
+  color: #fff !important;
+  box-shadow: inset 3px 0 0 #3b82f6 !important;
+}
+
+/* Cards: gentle elevation, no display/width changes */
+body.fwp-pro-panel .cpanel-tool-card,
+body.fwp-pro-panel .user-action-card,
+body.fwp-pro-panel .control-card,
+body.fwp-pro-panel .command-card,
+body.fwp-pro-panel .workspace-card,
+body.fwp-pro-panel .billing-stat-card,
+body.fwp-pro-panel .billing-plan-card {
+  border-radius: 14px !important;
+  box-shadow: 0 10px 28px rgba(15, 39, 66, 0.08) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+body.fwp-pro-panel .cpanel-tool-card:hover,
+body.fwp-pro-panel .user-action-card:hover,
+body.fwp-pro-panel .control-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Primary buttons */
+body.fwp-pro-panel .button-primary,
+body.fwp-pro-panel button.button-primary,
+body.fwp-pro-panel .button.button-primary {
+  background: linear-gradient(135deg, #2563eb, #0891b2) !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22) !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Inputs */
+body.fwp-pro-panel input:focus,
+body.fwp-pro-panel select:focus,
+body.fwp-pro-panel textarea:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.25) !important;
+  border-color: rgba(37, 99, 235, 0.45) !important;
+}
+
+/* Tables */
+body.fwp-pro-panel tr:hover td {
+  background: rgba(37, 99, 235, 0.04) !important;
+}
+
+/* Login cards */
+body.fwp-pro-panel .panel-login-card {
+  border-radius: 16px !important;
+  box-shadow: 0 18px 48px rgba(15, 39, 66, 0.12) !important;
+}
+
+@media (max-width: 720px) {
+  #fwp-auto-strip {
+    top: 6px;
+    max-width: calc(100vw - 0.75rem);
+    font-size: 0.75rem;
   }
-  body.fwp-pro-panel .page-shell-panel,
-  body.fwp-pro-panel .panel-skin-admin,
-  body.fwp-pro-panel .panel-skin-user {
-    width: calc(100% - 0.5rem) !important;
-  }
+  #fwp-auto-strip #fwp-auto-cmdk { display: none; }
 }
 
-/* Status / badges */
-body.fwp-pro-panel .status-dot,
-body.fwp-pro-panel .pill,
-body.fwp-pro-panel .badge,
-body.fwp-pro-panel .nav-pill {
-  border-radius: 999px !important;
-}
-body.fwp-pro-panel .eyebrow,
-body.fwp-pro-panel .section-tag {
-  color: #67e8f9 !important;
-  letter-spacing: 0.12em !important;
-}
-
-/* Billing / commercial cards */
-body.fwp-pro-panel .billing-command-card,
-body.fwp-pro-panel .billing-product-card,
-body.fwp-pro-panel .billing-flow-card,
-body.fwp-pro-panel .commercial-center,
-body.fwp-pro-panel .account-table-card {
-  background: linear-gradient(165deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.96)) !important;
-  border: 1px solid var(--fwp-line) !important;
-}
-
-/* Metrics */
-body.fwp-pro-panel .workspace-mini-stat,
-body.fwp-pro-panel .billing-stat-card strong,
-body.fwp-pro-panel .console-gauge-grid strong {
-  color: #f8fafc !important;
-}
-
-/* Tool finder */
-body.fwp-pro-panel .cpanel-tool-search,
-body.fwp-pro-panel .cpanel-tool-finder input {
-  background: rgba(2, 6, 23, 0.75) !important;
-  border-color: var(--fwp-line) !important;
-  color: #f1f5f9 !important;
-}
-
-/* Quick action lanes */
-body.fwp-pro-panel .user-tool-lane,
-body.fwp-pro-panel .user-action-stack,
-body.fwp-pro-panel .user-command-layout {
-  gap: 0.75rem !important;
-}
-
-/* Make main content breathe like modern WHM */
-body.fwp-pro-panel .panel-live-workspace,
-body.fwp-pro-panel .dashboard-view {
-  padding: 1rem 1.1rem 1.4rem !important;
-}
-
-/* Collapsed-friendly sidebar foot */
-body.fwp-pro-panel .sidebar-foot,
-body.fwp-pro-panel .sidebar-note {
-  color: #94a3b8 !important;
-  border-top: 1px solid var(--fwp-line) !important;
-  margin-top: 0.75rem !important;
-  padding-top: 0.75rem !important;
-}
-
-/* Prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   body.fwp-pro-panel * {
     transition: none !important;
-    animation: none !important;
   }
 }
